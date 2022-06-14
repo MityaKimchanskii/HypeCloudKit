@@ -23,6 +23,11 @@ class HypeListViewController: UIViewController {
         setupVews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+    }
+    
     // MARK: - Actions
     @IBAction func addHypeButtonTapped(_ sender: Any) {
         
@@ -74,7 +79,7 @@ class HypeListViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             guard let text = alertController.textFields?.first?.text, !text.isEmpty else { return }
-            
+
             if let hype = hype {
                 hype.body = text
                 HypeController.shared.updateHype(with: hype) { success in
@@ -83,7 +88,7 @@ class HypeListViewController: UIViewController {
                     }
                 }
             } else {
-                HypeController.shared.createHype(with: text) { success in
+                HypeController.shared.createHype(with: text, photo: nil) { success in
                     if success {
                         self.updateViews()
                     }

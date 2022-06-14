@@ -6,6 +6,7 @@
 //
 
 import CloudKit
+import UIKit
 
 class UserController {
     
@@ -16,11 +17,11 @@ class UserController {
     
     // MARK: - CRUD
     // Create User
-    func createUser(with username: String, bio: String, completion: @escaping (Bool) -> Void) {
+    func createUser(with username: String, bio: String, profilePhoto: UIImage?, completion: @escaping (Bool) -> Void) {
         
         fetchAppleUserReference { reference in
             guard let reference = reference else { completion(false); return }
-            let newUser = User(username: username, bio: bio, appleUserReference: reference)
+            let newUser = User(username: username, bio: bio, profilePhoto: profilePhoto, appleUserReference: reference)
             let record = CKRecord(user: newUser)
             
             self.publicDB.save(record) { (record, error) in

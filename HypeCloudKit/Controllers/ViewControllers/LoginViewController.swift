@@ -9,14 +9,19 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - Properties
+    var profilePhoto: UIImage?
+    
     // MARK: - Outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
+    @IBOutlet weak var pickerContainerView: UIView!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUser()
+        setupViews()
     }
     
     // MARK: - Actions
@@ -25,7 +30,7 @@ class LoginViewController: UIViewController {
               let bio = bioTextField.text
         else { return }
         
-        UserController.shared.createUser(with: username, bio: bio) { success in
+        UserController.shared.createUser(with: username, bio: bio, profilePhoto: profilePhoto) { success in
             if success {
                 self.presentHypeListViewController()
             }
@@ -48,5 +53,25 @@ class LoginViewController: UIViewController {
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true)
         }
+    }
+    
+    func setupViews() {
+        pickerContainerView.layer.cornerRadius = pickerContainerView.frame.height / 2
+        pickerContainerView.clipsToBounds = true
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "photoSegue" {
+            let destinationVC = segue.destination as? PhotoPickerViewController
+            destinationVC?.delegate = self
+        }
+    }
+}
+
+// MARK: - Extensions
+extension LoginViewController: PhotoPickerDelegate {
+    func photoPickerSelected(image: UIImage) {
+        self.profilePhoto = image
     }
 }

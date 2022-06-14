@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B7B95BF28590F2C00BA70AB /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B95BE28590F2C00BA70AB /* PhotoPickerViewController.swift */; };
+		3B7B95C12859492000BA70AB /* PhotoPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B95C02859492000BA70AB /* PhotoPicker.storyboard */; };
+		3B7B95C328594A5000BA70AB /* HypePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B95C228594A5000BA70AB /* HypePhotoViewController.swift */; };
 		3B7C2C7428583D100027B670 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2C7328583D100027B670 /* User.swift */; };
 		3B7C2C76285842F90027B670 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2C75285842F90027B670 /* UserController.swift */; };
 		3B7C2C7828584BB40027B670 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2C7728584BB40027B670 /* LoginViewController.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B7B95BE28590F2C00BA70AB /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
+		3B7B95C02859492000BA70AB /* PhotoPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoPicker.storyboard; sourceTree = "<group>"; };
+		3B7B95C228594A5000BA70AB /* HypePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypePhotoViewController.swift; sourceTree = "<group>"; };
 		3B7C2C7328583D100027B670 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3B7C2C75285842F90027B670 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		3B7C2C7728584BB40027B670 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 			children = (
 				3BB8453E285514C400880480 /* Main.storyboard */,
 				3B7C2C7928584D9D0027B670 /* HypeList.storyboard */,
+				3B7B95C02859492000BA70AB /* PhotoPicker.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +147,8 @@
 			children = (
 				3BB8455D2855179E00880480 /* HypeListViewController.swift */,
 				3B7C2C7728584BB40027B670 /* LoginViewController.swift */,
+				3B7B95BE28590F2C00BA70AB /* PhotoPickerViewController.swift */,
+				3B7B95C228594A5000BA70AB /* HypePhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B7C2C7B28584D9D0027B670 /* HypeList.storyboard in Resources */,
+				3B7B95C12859492000BA70AB /* PhotoPicker.storyboard in Resources */,
 				3BB84545285514C500880480 /* LaunchScreen.storyboard in Resources */,
 				3BB84542285514C500880480 /* Assets.xcassets in Resources */,
 				3BB84540285514C400880480 /* Main.storyboard in Resources */,
@@ -248,7 +258,9 @@
 				3BB845612855187100880480 /* HypeTableViewCell.swift in Sources */,
 				3B7C2C7428583D100027B670 /* User.swift in Sources */,
 				3BB8453B285514C400880480 /* SceneDelegate.swift in Sources */,
+				3B7B95C328594A5000BA70AB /* HypePhotoViewController.swift in Sources */,
 				3BB84555285515CD00880480 /* Hype.swift in Sources */,
+				3B7B95BF28590F2C00BA70AB /* PhotoPickerViewController.swift in Sources */,
 				3B7C2C7828584BB40027B670 /* LoginViewController.swift in Sources */,
 				3BB8455C2855170600880480 /* DateFormatter.swift in Sources */,
 			);
