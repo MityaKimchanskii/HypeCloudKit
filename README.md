@@ -7,7 +7,7 @@ Time spent: **4** hours spent in total
 The following features are implemented:
 
 * [+] CloudKit
-* [+] MVP
+* [+] MVC
 * [+] Notifications
 * [+] UITableView
 * [+] Delegate 
